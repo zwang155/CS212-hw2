@@ -1,0 +1,14 @@
+Ziling, Wang
+hwk2
+user45
+
+ssh -L 3306:sql.cs.usfca.edu:3306 zwang155@stargate.cs.usfca.edu
+mysql -u user45 -D user45 -h sql.cs.usfca.edu -p
+create table account(name varchar(20), pwd varchar(20), yearjoined int, email varchar(30), city varchar(20), duespaid boolean, primary key (email));
+insert into account values ('jose', '354moon', 2010, 'joe@yahoo.com', 'seattle', true);
+insert into account values ('nancy', 'wq7iip', 2016, 'nancy@mail.com', 'denvar', true);
+insert into account values ('shariff', '66w023', 1998, 'shariff@hotmail.com', 'boston', false);
+insert into account values ('anna', 'mx345', 2009, 'anna@hp.com', 'nyc', true);
+insert into account values ('hwe', '0877op', 2017, 'hwe@psu.edu', 'los angeles', false);
+update account set duespaid = true where name = 'hwe';
+delete from account where name = 'nancy';
